@@ -22,7 +22,7 @@ function fetchData() {
         "Change (24Hr)",
         "Max Supply",
         "",
-        ""
+        "",
       ];
 
       headers.forEach((headerText) => {
@@ -38,9 +38,8 @@ function fetchData() {
 
       coins.data.forEach((asset) => {
         const tr = document.createElement("tr");
-        tr.className = "tr";
+        tr.className = `tr-${asset.name.toLowerCase()}`;
         tr.id = `tr${asset.rank}`;
-
         const rank = document.createElement("td");
         rank.textContent = asset.rank;
         const name = document.createElement("td");
@@ -58,7 +57,7 @@ function fetchData() {
         // button.id = `id${asset.rank}`;
         button.className = "button";
         button.textContent = "Mark Favorite";
-        button.addEventListener("click", handleClick)
+        button.addEventListener("click", handleClick);
 
         tr.appendChild(rank);
         tr.appendChild(name);
@@ -70,13 +69,12 @@ function fetchData() {
 
         tbody.appendChild(tr);
 
-function handleClick() {
-  // console.log(`Button ${asset.rank} was clicked`)
-  const row = document.querySelector(`#tr${asset.rank}`)
-  // console.log(row);
-  row.className = "favorite"
-}
-
+        function handleClick() {
+          // console.log(`Button ${asset.rank} was clicked`)
+          const row = document.querySelector(`#tr${asset.rank}`); //////////////////////
+          // console.log(row);
+          row.className = "favorite";
+        }
       });
 
       table.appendChild(tbody);
@@ -93,6 +91,20 @@ function handleClick() {
 const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  // Code to handle click
-});
 
+  const input = document.querySelector("#input-crypto").value.toLowerCase();
+  form.reset();
+
+  const scrollTo = document.querySelector(`.tr-${input}`);
+  if (scrollTo) {
+    scrollTo.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    scrollTo.classList = "highlight";
+    setTimeout(() => {
+      scrollTo.classList.remove("highlight");
+    }, 5000);
+  }
+});
