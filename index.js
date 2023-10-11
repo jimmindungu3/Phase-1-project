@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", fetchData);
+
 const apiUrl = "https://api.coincap.io/v2/";
 
+// asset = [];
 function fetchData() {
   fetch(`${apiUrl}assets`)
     .then((response) => response.json())
     .then((coins) => {
+      // console.log(coins);
+
+      // asset = coins.data;
+      // console.log(asset)
       const table = document.createElement("table");
       const thead = document.createElement("thead");
       const trHeader = document.createElement("tr");
@@ -15,7 +21,8 @@ function fetchData() {
         "Price (USD)",
         "Change (24Hr)",
         "Max Supply",
-        "Action",
+        "",
+        ""
       ];
 
       headers.forEach((headerText) => {
@@ -31,7 +38,9 @@ function fetchData() {
 
       coins.data.forEach((asset) => {
         const tr = document.createElement("tr");
-        tr.className = `tr${asset.rank}`;
+        tr.className = "tr";
+        tr.id = `tr${asset.rank}`;
+
         const rank = document.createElement("td");
         rank.textContent = asset.rank;
         const name = document.createElement("td");
@@ -44,9 +53,12 @@ function fetchData() {
         changeIn24Hr.textContent = asset.changePercent24Hr;
         const maxSupply = document.createElement("td");
         maxSupply.textContent = asset.maxSupply;
+
         const button = document.createElement("button");
+        // button.id = `id${asset.rank}`;
         button.className = "button";
         button.textContent = "Mark Favorite";
+        button.addEventListener("click", handleClick)
 
         tr.appendChild(rank);
         tr.appendChild(name);
@@ -57,6 +69,14 @@ function fetchData() {
         tr.appendChild(button);
 
         tbody.appendChild(tr);
+
+function handleClick() {
+  // console.log(`Button ${asset.rank} was clicked`)
+  const row = document.querySelector(`#tr${asset.rank}`)
+  // console.log(row);
+  row.className = "favorite"
+}
+
       });
 
       table.appendChild(tbody);
@@ -67,3 +87,8 @@ function fetchData() {
       console.error("Error fetching data:", error);
     });
 }
+
+// const favDiv = document.querySelector(".farorite-assets");
+
+
+
