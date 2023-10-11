@@ -90,5 +90,9 @@ function handleClick() {
 
 // const favDiv = document.querySelector(".farorite-assets");
 
-
+const form = document.querySelector("#form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // Code to handle click
+});
 
