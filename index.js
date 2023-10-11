@@ -2,26 +2,21 @@ document.addEventListener("DOMContentLoaded", fetchData);
 
 const apiUrl = "https://api.coincap.io/v2/";
 
-// asset = [];
 function fetchData() {
   fetch(`${apiUrl}assets`)
     .then((response) => response.json())
     .then((coins) => {
-      // console.log(coins);
-
-      // asset = coins.data;
-      // console.log(asset)
       const table = document.createElement("table");
       const thead = document.createElement("thead");
       const trHeader = document.createElement("tr");
       const headers = [
+        "",
         "Rank",
         "Name",
         "Symbol",
         "Price (USD)",
         "Change (24Hr)",
         "Max Supply",
-        "",
         "",
       ];
 
@@ -52,27 +47,28 @@ function fetchData() {
         changeIn24Hr.textContent = asset.changePercent24Hr;
         const maxSupply = document.createElement("td");
         maxSupply.textContent = asset.maxSupply;
-
         const button = document.createElement("button");
-        // button.id = `id${asset.rank}`;
+        
+
         button.className = "button";
-        button.textContent = "Mark Favorite";
+        const thumbsUp = String.fromCodePoint(0x1F44D);
+        // const thumbsDown = String.fromCodePoint(0x1F44E)
+        button.textContent = thumbsUp
         button.addEventListener("click", handleClick);
 
+        tr.appendChild(button);
         tr.appendChild(rank);
         tr.appendChild(name);
         tr.appendChild(symbol);
         tr.appendChild(priceInUsd);
         tr.appendChild(changeIn24Hr);
         tr.appendChild(maxSupply);
-        tr.appendChild(button);
-
+        
         tbody.appendChild(tr);
 
         function handleClick() {
-          // console.log(`Button ${asset.rank} was clicked`)
-          const row = document.querySelector(`#tr${asset.rank}`); //////////////////////
-          // console.log(row);
+          const row = document.querySelector(`#tr${asset.rank}`);
+
           row.className = "favorite";
         }
       });
@@ -85,8 +81,6 @@ function fetchData() {
       console.error("Error fetching data:", error);
     });
 }
-
-// const favDiv = document.querySelector(".farorite-assets");
 
 const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
