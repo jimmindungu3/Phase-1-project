@@ -47,16 +47,16 @@ function fetchData() {
         changeIn24Hr.textContent = asset.changePercent24Hr;
         const maxSupply = document.createElement("td");
         maxSupply.textContent = asset.maxSupply;
-        const button = document.createElement("button");
+        const span = document.createElement("span");
         
 
-        button.className = "button";
+        span.className = "span";
         const thumbsUp = String.fromCodePoint(0x1F44D);
         // const thumbsDown = String.fromCodePoint(0x1F44E)
-        button.textContent = thumbsUp
-        button.addEventListener("click", handleClick);
+        span.textContent = thumbsUp
+        span.addEventListener("click", handleClick);
 
-        tr.appendChild(button);
+        tr.appendChild(span);
         tr.appendChild(rank);
         tr.appendChild(name);
         tr.appendChild(symbol);
