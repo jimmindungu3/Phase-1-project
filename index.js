@@ -7,6 +7,7 @@ function fetchData() {
     .then((response) => response.json())
     .then((coins) => {
       const table = document.createElement("table");
+      table.id = "table";
       const thead = document.createElement("thead");
       const trHeader = document.createElement("tr");
       const headers = [
@@ -17,7 +18,6 @@ function fetchData() {
         "Price (USD)",
         "Change (24Hr)",
         "Max Supply",
-        "",
       ];
 
       headers.forEach((headerText) => {
@@ -99,6 +99,6 @@ form.addEventListener("submit", (e) => {
     scrollTo.classList = "highlight";
     setTimeout(() => {
       scrollTo.classList.remove("highlight");
-    }, 5000);
+    }, 2000);
   }
 });
