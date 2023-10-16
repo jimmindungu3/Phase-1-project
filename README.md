@@ -7,7 +7,6 @@
 THis is a web application that serves to gie up-to-date crypto currencies information to users. The site uses a free public API - CoinCAp API. The API has different endpoints. This Application uses the assets endpoint accessible [here.](api.coincap.io/v2/assets)
 
 # Crypto Markets Updates
-
 Crypto markets updates is a web aplication that has been designed to offer up to date data on crypto currencies.
 The application uses HTML, CSS and JavaScript technologies making it lightweight.
 
@@ -25,28 +24,3 @@ To contribute to this project:
 4. Once you are done with making changes, commit to your branch.
 5. Push your changes t your github fork.
 6. Lastly create and submit pull request.
-
-
-# LICESNSE
-# MIT License
-
-Copyright (c) 2023 James Ndungu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
