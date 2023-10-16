@@ -4,12 +4,12 @@
 
 # Description
 
-THis is a web application that serves to gie up-to-date crypto currencies information to users. The site uses a free public API - CoinCAp API. The API has different endpoints. This Application uses the assets endpoint accessible [here.](api.coincap.io/v2/assets)
+This is a web application that serves to give up-to-date cryptocurrency information to users. The site uses a free public API - CoinCAp API. The API has different endpoints. This Application uses the assets endpoint accessible [here.](api.coincap.io/v2/assets)
 
 # Crypto Markets Updates
 
-Crypto markets updates is a web aplication that has been designed to offer up to date data on crypto currencies.
-The application uses HTML, CSS and JavaScript technologies making it lightweight.
+Crypto Markets Updates is a web application that has been designed to offer up-to-date data on crypto currencies.
+The application uses HTML, CSS, and JavaScript technologies making it lightweight.
 
 # Installation
 
@@ -23,8 +23,8 @@ To contribute to this project:
 2. Create a new branch in your local repository to keep changes isolated from the main branch.
 3. Make your desired changes to the code, documentation, or any other relevant files within your branch.
 4. Once you are done with making changes, commit to your branch.
-5. Push your changes t your github fork.
-6. Lastly create and submit pull request.
+5. Push your changes to your GitHub fork.
+6. Lastly create and submit pull requests.
 
 # MIT License
 
