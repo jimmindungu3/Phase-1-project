@@ -6,11 +6,6 @@
 
 This is a web application that serves to give up-to-date cryptocurrency information to users. The site uses a free public API - CoinCAp API. The API has different endpoints. This Application uses the assets endpoint accessible [here.](api.coincap.io/v2/assets)
 
-# Crypto Markets Updates
-
-Crypto Markets Updates is a web application that has been designed to offer up-to-date data on cryptocurrencies.
-The application uses HTML, CSS, and JavaScript technologies making it lightweight.
-
 # Installation
 
 The application requires no installation. It is served live [here](https://jimmindungu3.github.io/Phase-1-project/)
