@@ -8,7 +8,7 @@ This is a web application that serves to give up-to-date cryptocurrency informat
 
 # Crypto Markets Updates
 
-Crypto Markets Updates is a web application that has been designed to offer up-to-date data on crypto currencies.
+Crypto Markets Updates is a web application that has been designed to offer up-to-date data on cryptocurrencies.
 The application uses HTML, CSS, and JavaScript technologies making it lightweight.
 
 # Installation
