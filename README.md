@@ -1,9 +1,5 @@
 # Crypto Markets Updates
 
-# Author - James Ndungu
-
-# Description
-
 This is a web application that serves to give up-to-date cryptocurrency information to users. The site uses a free public API - CoinCAp API. The API has different endpoints. This Application uses the assets endpoint accessible [here.](api.coincap.io/v2/assets)
 
 # Installation
@@ -42,3 +38,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+# Author - James Ndungu
