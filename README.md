@@ -10,7 +10,7 @@ The application requires no installation. It is served live [here](https://jimmi
 
 To contribute to this project:
 
-1. Head over to [this repository](https://github.com/jimmindungu3/Phase-1-project.git), fork and clone to your local machine.
+1. Head over to [this repository](https://github.com/jimmindungu3/Phase-1-project.git) and clone to your local machine.
 2. Create a new branch in your local repository to keep changes isolated from the main branch.
 3. Make your desired changes to the code, documentation, or any other relevant files within your branch.
 4. Once you are done with making changes, commit to your branch.
